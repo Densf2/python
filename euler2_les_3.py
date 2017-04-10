@@ -92,7 +92,8 @@ def summm():
 # Найдите сумму цифр в числе 100!.
 def factorial():
     # +++ ваш код +++
-    return sum(map(lambda n: sum(map(int, str(n))), xrange(1, 100)))
+    numb = reduce(lambda o, p: o *p, xrange(1, 101)
+    return sum([int(x) for x in str(numb)])
 
 
 # Простая функция test() используется в main() для вывода
