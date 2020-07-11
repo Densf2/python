@@ -1,11 +1,9 @@
-List of required tools and modules to the computer: 
+List of required tools and modules: 
 
 Python 3.7.7
-Pip 
-Robot framework
-SeleniumLibrary - for install SeleniumLibrary please use the command: pip install --upgrade robotframework-seleniumlibrary
-update the selenium Library pip install -U selenium
-Download the latest chromedriver for running tests and update the PATH
+Robot framework 3.2.1
+Selenium2Library 3.0.0
+Chromedriver 81.0.4044.69
 
 For running tests on the local machine:
 - Pull the repository to your local machine 
