@@ -3,16 +3,16 @@ Test Cases
 
 All verification should be run in Browser on desktop and mobile devices (list of supported browsers and platforms for desktop and mobile not clear).
 Precondition:
+    Open main page
     Open browser console -> page should run without errors in browser console
 
 MAIN PAGE
 MP1 Change the language
 Test Steps:
-    Open main page
     Change the language to DE
     Change the language to EN
 Expected result:
-    The content is translated into the selected language
+    The page is translated into the selected language
 
 MP2 Submit button active after filling valid data
 Test Steps:
@@ -44,23 +44,39 @@ Test Steps:
 Expected result:
     The submit button inactive
 
+MP6 Check the limit of characters in inputs
+Test data: (limits of fields not clear for now)
+Test Steps:
+    Open booking details page
+    Fill fields with more than max length characters in the input
+    Click submit
+Expected result:
+    The error message shows after shifting the focus to another input
+    OR
+    The error message shows after clicking submit button
+
+MP7 Tab button should works
+Test Steps:
+    Press Tab
+Expected result:
+    The focus shifting to the next input
+
 
 BOOKING DETAILS PAGE
 Precondition:
+    Open booking details page
     Open browser console -> page should run without errors in browser console
 
 
 BP1 Change the language
 Test Steps:
-    Open booking details page
     Change the language to DE
     Change the language to EN
 Expected result:
-    The content is translated into the selected language
+    The page is translated into the selected language
 
 BP2 Submit button inactive if not filling required fields
 Test Steps:
-    Open booking details page
     Not fill required fields
 Expected result:
     The submit should be inactive
@@ -69,7 +85,6 @@ Expected result:
 
 BP3 Check drop-down lists and calendar
 Test Steps:
-    Open booking details page
     Choose country from the drop-down list
     Choose nationality from the drop-down list
     Choose the type of stay from the drop-down list
@@ -79,7 +94,6 @@ Expected result:
 
 BP4 Verify validation of inputs
 Test Steps:
-    Open booking details page
     Fill numbers into the text fields
     Fill text into the number fields
     Click submit
@@ -94,7 +108,6 @@ Expected result:
 
 BP5 Persons under 18 years of age cannot book a hotel room
 Test Steps:
-    Open booking details page
     Fill required fields
     Choose from the calendar date of birth younger than 18 years
 Expected result:
@@ -105,7 +118,6 @@ Expected result:
 BP6 Upload passport image for non-germans nationalities in particular formats
 Test data: (list of formats not clear for now)
 Test Steps:
-    Open booking details page
     Fill required fields
     Upload the passport image in format from the list
     Click submit
@@ -116,14 +128,12 @@ Expected result:
 
 BP7 Tab button should works
 Test Steps:
-    Open booking details page
     Press Tab
 Expected result:
     The focus shifting to the next input
 
 BP8 All data should be shows in inputs if reload page
 Test Steps:
-    Open booking details page
     Fill required fields
     Reload the page
 Expected result:
@@ -132,7 +142,6 @@ Expected result:
 BP9 Check the limit of characters in inputs
 Test data: (limits of fields not clear for now)
 Test Steps:
-    Open booking details page
     Fill fields with more than max length characters in the input
     Click submit
 Expected result:
@@ -143,7 +152,6 @@ Expected result:
 BP10 Check the API request and response
 Precondition: Open Network tab
 Test Steps:
-    Open booking details page
     Fill required fields
     Upload the passport image in format from the list
     Click submit
@@ -161,7 +169,7 @@ Test Steps:
     Change the language to DE
     Change the language to EN
 Expected result:
-    The content is translated into the selected language
+    The page is translated into the selected language
 
 
 

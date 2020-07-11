@@ -1,0 +1,50 @@
+BUG #1
+Language not changed on the main page
+STR:
+- Open the main page
+- Change the language to DE
+- Change the language to EN
+
+Expected result: The page is translated into the selected language
+Actual result: The page not translated
+
+BUG #2
+Language not changed on the booking details page
+STR:
+- Open the booking details page
+- Change the language to DE
+- Change the language to EN
+
+Expected result: The page is translated into the selected language
+Actual result: The page not translated
+
+BUG #3
+Persons under 18 years can book a room
+STR:
+- Open the booking details page
+- Fill required fields on the form
+- Choose the date of birthday under 18 years from today
+
+Expected result: Can't choose date of birthday under 18 years
+Actual result: Can choose date of birthday under 18 years
+
+BUG #4
+Language not changed on the confirmation page
+STR:
+- Open the confirmation page
+- Change the language to DE
+- Change the language to EN
+
+Expected result: The page is translated into the selected language
+Actual result: The page not translated
+
+IMPROVEMENT #1
+Add red highlight to required inputs if user receive error message
+STR:
+- Open the booking details page
+- Not choose the date of birth
+- Not choose the type of stay
+- Fill other required fields on the form
+
+Expected result: Required fields highlighted red color if not filled
+Actual result: Not highlighted red color
