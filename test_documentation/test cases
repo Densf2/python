@@ -1,0 +1,168 @@
+
+Test Cases
+
+All verification should be run in Browser on desktop and mobile devices (list of supported browsers and platforms for desktop and mobile not clear).
+Precondition:
+    Open browser console -> page should run without errors in browser console
+
+MAIN PAGE
+MP1 Change the language
+Test Steps:
+    Open main page
+    Change the language to DE
+    Change the language to EN
+Expected result:
+    The content is translated into the selected language
+
+MP2 Submit button active after filling valid data
+Test Steps:
+    Enter valid last name
+    Enter valid booking reference code
+Expected result:
+    The submit button active
+    User redirected to booking details page after clicking the submit button
+
+MP3 User receive error message after filling the incorrect last name, reference number
+Test Steps:
+    Enter invalid last name
+    Enter invalid booking reference code
+    Click submit
+Expected result:
+    User receives error message about incorrect data
+
+MP4 The submit button inactive if not filling booking reference field
+Test Steps:
+    Enter valid last name
+    Not fill booking reference code
+Expected result:
+     The submit button inactive
+
+MP5 The submit button inactive if not filling last name field
+Test Steps:
+    Enter valid booking reference code
+    Not fill last name field
+Expected result:
+    The submit button inactive
+
+
+BOOKING DETAILS PAGE
+Precondition:
+    Open browser console -> page should run without errors in browser console
+
+
+BP1 Change the language
+Test Steps:
+    Open booking details page
+    Change the language to DE
+    Change the language to EN
+Expected result:
+    The content is translated into the selected language
+
+BP2 Submit button inactive if not filling required fields
+Test Steps:
+    Open booking details page
+    Not fill required fields
+Expected result:
+    The submit should be inactive
+    All required fields highlighted
+    Error message shows
+
+BP3 Check drop-down lists and calendar
+Test Steps:
+    Open booking details page
+    Choose country from the drop-down list
+    Choose nationality from the drop-down list
+    Choose the type of stay from the drop-down list
+    Choose the date from calendar
+Expected result:
+    All selected options should be displayed
+
+BP4 Verify validation of inputs
+Test Steps:
+    Open booking details page
+    Fill numbers into the text fields
+    Fill text into the number fields
+    Click submit
+
+Note:
+    Repeat with special characters
+
+Expected result:
+    All fields with incorrect data highlighted after shifting focus to another field
+    Error message shows
+    The submit should be inactive
+
+BP5 Persons under 18 years of age cannot book a hotel room
+Test Steps:
+    Open booking details page
+    Fill required fields
+    Choose from the calendar date of birth younger than 18 years
+Expected result:
+    The error message shows after shifting the focus to another input
+    OR
+    The error message shows after clicking submit button
+
+BP6 Upload passport image for non-germans nationalities in particular formats
+Test data: (list of formats not clear for now)
+Test Steps:
+    Open booking details page
+    Fill required fields
+    Upload the passport image in format from the list
+    Click submit
+Expected result:
+    The data successfully uploaded and user redirected to confirmation page
+    OR
+    Error message if user uploaded image in non-supported format
+
+BP7 Tab button should works
+Test Steps:
+    Open booking details page
+    Press Tab
+Expected result:
+    The focus shifting to the next input
+
+BP8 All data should be shows in inputs if reload page
+Test Steps:
+    Open booking details page
+    Fill required fields
+    Reload the page
+Expected result:
+    All data filled shows in inputs
+
+BP9 Check the limit of characters in inputs
+Test data: (limits of fields not clear for now)
+Test Steps:
+    Open booking details page
+    Fill fields with more than max length characters in the input
+    Click submit
+Expected result:
+    The error message shows after shifting the focus to another input
+    OR
+    The error message shows after clicking submit button
+
+BP10 Check the API request and response
+Precondition: Open Network tab
+Test Steps:
+    Open booking details page
+    Fill required fields
+    Upload the passport image in format from the list
+    Click submit
+Expected result:
+    Request and response without errors
+
+
+CONFIRMATION PAGE
+Precondition:
+    User should be on confirmation page
+    Open browser console -> page should run without errors in browser console
+
+CP1 Change the language
+Test Steps:
+    Change the language to DE
+    Change the language to EN
+Expected result:
+    The content is translated into the selected language
+
+
+
+
