@@ -1,14 +1,13 @@
 *** Settings ***
-Documentation    Tests to verification filling last name on the main page
-...              filling the all fields, choosing the date, change the nationality to Denmark on booking details page
-...              and redirect to the confirmation page
+Documentation    Tests for verification funcionality in main, booking detail page
+...              filling last name, booking reference code on the main page
+...              choosing the date, change the nationality to Denmark on booking details page
 
 Library     SeleniumLibrary
 Test Teardown  Close Browser
 
 *** Test Cases ***
 Change The Birthdate, Natinoality On Booking Details Page
-    [Tags]    DEBUG
     Open The Main Page
     Fill The Last Name, Booking Reference, Click Submit
     Redirect To Booking Details Page Success
